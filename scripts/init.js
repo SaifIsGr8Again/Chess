@@ -3,8 +3,8 @@ const canvas = document.body.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 canvas.height = 0.9985 * screen.height;
 canvas.width = canvas.height;
-canvas.style.marginLeft = 0.1875 * screen.width + "px";
-const canvasMargin = 0.1875 * screen.width;
+canvas.style.marginLeft = 0.22 * screen.width + "px";
+const canvasMargin = 0.22 * screen.width;
 const CW = canvas.width;
 const CH = canvas.height;
 let playerCounter = 0;
@@ -51,7 +51,7 @@ class piece {
     }
 }
 //sounds & music
-const music = new Howl({
+/*const music = new Howl({
     src: "Music_FX/chessBackgroundMusic.mp3",
     loop: true,
     volume: 0.5
@@ -66,7 +66,7 @@ const soundFX = [
     new Howl({
         src: "Music_FX/chessFX-3.mp3"
     }),
-]
+]*/
 //images
 const imgDivOne = document.body.querySelector("#deadPiecesOne .imgContainer")
 const imgDivTwo = document.body.querySelector("#deadPiecesTwo .imgContainer")

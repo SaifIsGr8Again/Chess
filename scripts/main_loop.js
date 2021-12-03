@@ -1,5 +1,5 @@
 //the mainLoop
-music.play()
+//music.play()
 function mainLoop() {
     drawBoard()
     drawPieces()

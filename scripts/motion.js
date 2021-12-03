@@ -3,6 +3,11 @@ function movePiece(xClick, yClick, piece, imgDiv) {
         if (xClick > square.posX && xClick < square.posX + square.width) {
             if (yClick > square.posY && yClick < square.posY + square.height) {
                 selectedSquare = square
+                if (square.hasPiece)
+                {
+                    selectedPiece = pieceArr.indexOf(square.presentPiece)
+                }
+		        
             }
         }
     }
@@ -76,12 +81,29 @@ function movePiece(xClick, yClick, piece, imgDiv) {
             newImg.setAttributeNode(newAttTwo);
             imgDiv.appendChild(newImg)
             pieceArr.splice(pieceArr.indexOf(selectedSquare.presentPiece), 1)
+            let val = 0
+            switch(killedPiece.name)
+            {
+                case "rook":
+                    val = 5
+                    break
+                case "bishop":
+                case "knight":
+                    val = 3
+                    break
+                case "queen":
+                    val = 9
+                    break
+                case "pawn":
+                    val = 1
+                    break
+            }
             if (playerCounter % 2 == 0) {
-                scoreOne++
+                scoreOne += val
                 scoreOneElem.innerHTML = "Player One Score: " + JSON.stringify(scoreOne)
             } else {
-                scoreTwo++
-                scoreTwoElem.innerHTML = "Player One Score: " + JSON.stringify(scoreTwo)
+                scoreTwo += val
+                scoreTwoElem.innerHTML = "Player Two Score: " + JSON.stringify(scoreTwo)
             }
         }
         piece.row = selectedSquare.row

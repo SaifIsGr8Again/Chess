@@ -10,19 +10,19 @@ function createBoard() {
         colPos = 0
         colSet = 0
         if (forCounter % 2 == 0) {
-            clrSet = "peru"
+            clrSet = "wheat"
         } else {
-            clrSet = "black"
+            clrSet = "#AB7B45"
         }
 
         for (forCounterTwo = 0; forCounterTwo < 8; forCounterTwo++) {
             squareArr.push(new square(colPos, rowPos, clrSet, colSet, rowSet))
             colPos += CW / 8
             colSet++
-            if (clrSet == "peru") {
-                clrSet = "black"
+            if (clrSet == "wheat") {
+                clrSet = "#AB7B45"
             } else {
-                clrSet = "peru"
+                clrSet = "wheat"
             }
         }
         rowPos += CH / 8
@@ -37,7 +37,7 @@ function createPieces() {
     colPos = 0
 
     for (forCounter = 0; forCounter < 8; forCounter++) {
-        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, nameArr[forCounter], "playerOne", imgArrOne[forCounter], pieceWidthArr[forCounter]))
+        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, nameArr[forCounter], "playerOne", imgArrOne[forCounter], 1))
         colPos += CW / 8
         colSet++
     }
@@ -48,7 +48,7 @@ function createPieces() {
     colPos = 0
 
     for (forCounter = 0; forCounter < 8; forCounter++) {
-        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, "pawn", "playerOne", pawnImgOne, 0.75))
+        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, "pawn", "playerOne", pawnImgOne, 1))
         colPos += CW / 8
         colSet++
     }
@@ -59,7 +59,7 @@ function createPieces() {
     colPos = 0
 
     for (forCounter = 0; forCounter < 8; forCounter++) {
-        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, "pawn", "playerTwo", pawnImgTwo, 0.75))
+        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, "pawn", "playerTwo", pawnImgTwo, 1))
         colPos += CW / 8
         colSet++
     }
@@ -70,7 +70,7 @@ function createPieces() {
     colPos = 0
 
     for (forCounter = 0; forCounter < 8; forCounter++) {
-        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, nameArr[forCounter], "playerTwo", imgArrTwo[forCounter], pieceWidthArr[forCounter]))
+        pieceArr.push(new piece(colPos, rowPos, colSet, rowSet, nameArr[forCounter], "playerTwo", imgArrTwo[forCounter], 1))
         colPos += CW / 8
         colSet++
     }

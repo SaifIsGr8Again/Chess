@@ -2,7 +2,7 @@
 function drawPieces() {
     for (let piece of pieceArr) {
         ctx.save()
-        ctx.translate(piece.posX, piece.posY)
+        ctx.translate(piece.posX + 1, piece.posY)
         ctx.fillStyle = "transparent"
         ctx.fillRect(0, 0, piece.width, piece.height)
         ctx.drawImage(piece.img, (piece.width - piece.imgWidth) / 2, 0, piece.imgWidth, piece.height)

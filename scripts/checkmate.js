@@ -25,7 +25,7 @@ function verifyNoCheckBefore(piecePar, squarePar, imgArr, element) {
                     scoreOneElem.innerHTML = "Player One Score: " + scoreOne
                 } else {
                     promote(piecePar)
-                    soundFX[Math.floor(Math.random() * 2.99)].play()
+                    //soundFX[Math.floor(Math.random() * 2.99)].play()
                     setTimeout(function () {
                         playerCounter++
                         movingBoolean = false
@@ -46,7 +46,7 @@ function verifyNoCheckBefore(piecePar, squarePar, imgArr, element) {
                     alert("You can't check yourself!")
                     scoreTwoElem.innerHTML = "Player Two Score: " + scoreTwo
                 } else {
-                    soundFX[Math.floor(Math.random() * 2.99)].play()
+                    //soundFX[Math.floor(Math.random() * 2.99)].play()
                     promote(piecePar)
                     setTimeout(function () {
                         playerCounter++

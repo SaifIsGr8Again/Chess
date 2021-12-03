@@ -86,10 +86,10 @@ function queenCastle(kingSquare, kingPiece, rookPiece) {
         return null;
     }
     if (castleBool) {
-        kingPiece.col -= 3
-        kingPiece.posX -= 3 * (CW / 8)
-        rookPiece.col += 2
-        rookPiece.posX += 2 * (CW / 8)
+        kingPiece.col -= 2
+        kingPiece.posX -= 2 * (CW / 8)
+        rookPiece.col += 3
+        rookPiece.posX += 3 * (CW / 8)
         playerCounter++
     }
 }

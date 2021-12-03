@@ -20,8 +20,7 @@
         }
         .dead img{
             display:inline;
-            width:5em;
-            height:7.5em;
+            width: 5vw;
         }
         .dead {
             height: 75vh;
@@ -32,14 +31,17 @@
             border:2.5px solid black;
             border-radius: 0.5em;
         }
+        #deadPiecesOne, #scoreOne {
+            right: 1vw;
+        }
         #deadPiecesTwo, #scoreTwo {
-            right: 0;
+            left: 1vw;
         }
-        #scoreOne{
-            top: 2.5vh;
+        #scoreTwo{
+            top: -1.5vh;
         }
-        #scoreTwo {
-            bottom: 2.5vh;
+        #scoreOne {
+            bottom: -1.5vh;
         }
         #scoreOne, #scoreTwo, .dead, .castleDiv {
             position: absolute;
@@ -63,22 +65,22 @@
         .castleDiv:hover{
             background: lightgrey;
         }
-        #castleOneKing {
-            bottom:6.25vh;
-            left:0.25vw;
-        }
-        #castleOneQueen {
-            bottom: 0.5vh;
-            left: 0.25vw;
-        }
         #castleTwoKing {
-            top: 6.25vh;
-            right: 0.25vw;
+            bottom:6.25vh;
+            left:1.4vw;
+        }
+        #castleTwoQueen {
+            bottom: 0.5vh;
+            left: 1.4vw;
+        }
+        #castleOneKing {
+            top: 0.5vh;
+            right: 1.4vw;
         }
 
-        #castleTwoQueen {
-            top: 0.5vh;
-            right: 0.25vw;
+        #castleOneQueen {
+            top: 6.25vh;
+            right: 1.4vw;
         }
     </style>
 </head>
@@ -107,10 +109,10 @@
     <img id="pawnPlayerOne" src="images/playerOne/Pawn.png" />
     <img id="pawnPlayerTwo" src="images/playerTwo/Pawn.png" />
 
-    <div class="castleDiv" id="castleOneKing" onclick="determinePlayerKingCastle()">Do a King-Castle</div>
-    <div class="castleDiv" id="castleOneQueen" onclick="determinePlayerQueenCastle()">Do a Queen-Castle</div>
-    <div class="castleDiv" id="castleTwoKing" onclick="determinePlayerKingCastle()">Do a King-Castle</div>
-    <div class="castleDiv" id="castleTwoQueen" onclick="determinePlayerQueenCastle()">Do a Queen-Castle</div>
+    <div class="castleDiv" id="castleOneKing" onclick="determinePlayerKingCastle()">Castle King-Side</div>
+    <div class="castleDiv" id="castleOneQueen" onclick="determinePlayerQueenCastle()">Castle Queen-Side</div>
+    <div class="castleDiv" id="castleTwoKing" onclick="determinePlayerKingCastle()">Castle King-Side</div>
+    <div class="castleDiv" id="castleTwoQueen" onclick="determinePlayerQueenCastle()">Castle Queen-Side</div>
 
     <div id="scoreOne">
         <h1>Player One Score: 0</h1>
